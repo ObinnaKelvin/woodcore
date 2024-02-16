@@ -63,35 +63,35 @@ function Dashboard() {
                             <div className="delete-icon"><Trash2 size={17} /></div> */}
                             <div className="top"><UserCheck /></div>
                             <div className="mid">1,561</div>
-                            <div className="footer">Active Accounts</div>
+                            <div className="footer">Active Accounts.</div>
                         </div>
                         <div className="schedule-item">
                             {/* <div className="edit-icon"><Pencil size={17} /></div>
                             <div className="delete-icon"><Trash2 size={17} /></div> */}
                             <div className="top"><UserRoundCog /></div>
                             <div className="mid">1,561</div>
-                            <div className="footer">Suspended Accounts</div>
+                            <div className="footer">Suspended Accountsz.</div>
                         </div>
                         <div className="schedule-item">
                             {/* <div className="edit-icon"><Pencil size={17} /></div>
                             <div className="delete-icon"><Trash2 size={17} /></div> */}
                             <div className="top"><UserMinus /></div>
                             <div className="mid">1,781</div>
-                            <div className="footer">Deactivated Accounts</div>
+                            <div className="footer">Deactivated Accounts.</div>
                         </div>
                         <div className="schedule-item">
                             {/* <div className="edit-icon"><Pencil size={17} /></div>
                             <div className="delete-icon"><Trash2 size={17} /></div> */}
                             <div className="top"><Handshake /></div>
                             <div className="mid">20,000</div>
-                            <div className="footer">Successful Transactions</div>
+                            <div className="footer">Successful Transactions.</div>
                         </div>
                         <div className="schedule-item">
                             {/* <div className="edit-icon"><Pencil size={17} /></div>
                             <div className="delete-icon"><Trash2 size={17} /></div> */}
                             <div className="top"><TimerReset /></div>
                             <div className="mid">20,000</div>
-                            <div className="footer">Scheduled Transactions</div>
+                            <div className="footer">Scheduled Transactions.</div>
                         </div>
                     </div>
                 </div>
