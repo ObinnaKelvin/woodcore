@@ -1,8 +1,13 @@
 import React from 'react'
 import './transactions.scss';
 import { DesktopNavbar } from '../../components/navigation/Navbar';
-import { MoveDownLeft, MoveUpRight, Pencil, Trash2 } from 'lucide-react';
+import { ArrowLeftRight, MoveDownLeft, MoveUpRight, Pencil, TimerReset, Trash2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { Chart as ChartJS, defaults } from "chart.js/auto";
+import { Bar, Doughnut, Line } from "react-chartjs-2";
+import revenueData from "../../components/chart/revenueData.json";
+import sourceData from "../../components/chart/sourceData.json";
+// import TotalRevenue from '../../components/chart/Chart';
 
 const Transactions = () => {
   return (
@@ -18,15 +23,98 @@ const Transactions = () => {
                 </div>
 
                 <div className="transactions-left-stats">
-                    <div className="balance-card">
-                        <div className="sub-text">
-                            Your account balance
+                    <div className="transactions-left-graph">
+                        <Line
+                            data={{
+                                labels: revenueData.map((data) => data.label),
+                                datasets: [
+                                {
+                                    label: "Revenue",
+                                    data: revenueData.map((data) => data.revenue),
+                                    backgroundColor: "#064FF0",
+                                    borderColor: "#064FF0",
+                                },
+                                {
+                                    label: "Cost",
+                                    data: revenueData.map((data) => data.cost),
+                                    backgroundColor: "#FF3030",
+                                    borderColor: "#FF3030",
+                                },
+                                ],
+                            }}
+                            options={{
+                                elements: {
+                                    line: {
+                                        tension: 0.5,
+                                    },
+                                },
+                                plugins: {
+                                title: {
+                                    text: "Monthly Revenue & Cost",
+                                },
+                                },
+                            }}
+                        />
+
+                       
+                    </div>
+                    {/* <div className="transactions-left-graph">
+                        <Bar
+                          data={{
+                            labels: sourceData.map((data) => data.label),
+                            datasets: [
+                              {
+                                label: "Count",
+                                data: sourceData.map((data) => data.value),
+                                backgroundColor: [
+                                  "rgba(43, 63, 229, 0.8)",
+                                  "rgba(250, 192, 19, 0.8)",
+                                  "rgba(253, 135, 135, 0.8)",
+                                ],
+                                borderRadius: 5,
+                              },
+                            ],
+                          }}
+                          options={{
+                            plugins: {
+                              title: {
+                                text: "Revenue Source",
+                              },
+                            },
+                          }}
+                        />
+
+                       
+                    </div> */}
+                    <Link to={'/transactions/transfer'} className='link'> 
+                        <div className="action-card">
+                            <div className="action-icon">
+                                <ArrowLeftRight />
+                            </div>
+                            {/* <Link to={'/transactions/transfer'} className='link'>  */}
+                                <div className="sub-text">
+                                    Transfer
+                                </div>
+                            {/* </Link> */}
                         </div>
-                        <div className="main-text">
-                            ₦ 2,000,567.00
+                    </Link>
+                    <div className="action-card">
+                        <div className="action-icon">
+                            <TimerReset />
+                        </div>
+                        <div className="sub-text">
+                            Scheduled Transfers
                         </div>
                     </div>
-                    <div className="money-move-holder">
+                    {/* <div className="action-card">
+                        <div className="action-icon">
+                            <ArrowLeftRight />
+                        </div>
+                        <div className="sub-text">
+                            Transfer
+                        </div>
+                    </div> */}
+                    {/* <div className="money-move-holder">
                         <div className="money-move">
                             <div className="left">
                                 <MoveDownLeft />
@@ -45,12 +133,9 @@ const Transactions = () => {
                                 <span>₦ 850,000.00</span>
                             </div>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
 
-                <div className="transactions-left-graph">
-                    <h1>Graphs</h1>
-                </div>
 
                 <div className="transactions-scheduled">
                     <div className="header-text">
@@ -90,7 +175,7 @@ const Transactions = () => {
                 </div>
 
             </div>
-            <div className="transactions-right">
+            {/* <div className="transactions-right">
                 <div className="transactions-transaction-activity">
                     <div className="header-text">
                         <h3>Recent Activities</h3>
@@ -133,7 +218,7 @@ const Transactions = () => {
                     </div>
                 </div>
                 
-            </div>
+            </div> */}
         </div>
     </div>
   )

@@ -132,8 +132,9 @@
             }
 
             .dashboard-left-graph {
-                width: 40%;
-                margin: -20px 0px 0px 0px;
+                width: 45%;
+                margin: 0px 0px 0px 0px;
+                // border: 1px solid red;
             }
 
             .dashboard-scheduled {
@@ -152,6 +153,8 @@
                     display: flex;
                     align-items: center;
                     border-color: #fff #fff #c5c5c5 #fff ;
+                    font-weight: 500;
+                    opacity: 0.7;
                 }
 
                 .scheduled-holder {

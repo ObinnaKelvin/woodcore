@@ -3,6 +3,11 @@ import './dashboard.scss';
 import { DesktopNavbar } from '../../components/navigation/Navbar';
 import { Handshake, MoveDownLeft, MoveUpRight, Pencil, TimerReset, Trash2, UserCheck, UserMinus, UserRoundCog } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import CountUp from 'react-countup';
+import { Chart as ChartJS, defaults } from "chart.js/auto";
+import { Bar, Doughnut, Line } from "react-chartjs-2";
+import revenueData from "../../components/chart/revenueData.json";
+import sourceData from "../../components/chart/sourceData.json";
 
 function Dashboard() {
   return (
@@ -23,7 +28,8 @@ function Dashboard() {
                             Your account balance
                         </div>
                         <div className="main-text">
-                            ₦ 2,000,567.00
+                            ₦
+                            <CountUp end={2000567.00} duration={2}/>
                         </div>
                     </div>
                     <div className="money-move-holder">
@@ -33,7 +39,8 @@ function Dashboard() {
                             </div>
                             <div className="right">
                                 <span>Money In</span>
-                                <span>₦ 300,000.00</span>
+                                <span> ₦
+                            <CountUp end={300000.00} duration={2}/></span>
                             </div>
                         </div>
                         <div className="money-move">
@@ -42,14 +49,52 @@ function Dashboard() {
                             </div>
                             <div className="right">
                                 <span>Money Out</span>
-                                <span>₦ 850,000.00</span>
+                                <span> ₦
+                            <CountUp end={850000.00} duration={2}/></span>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <div className="dashboard-left-graph">
-                    <h1>Graphs</h1>
+                    {/* <h1>Graphs</h1> */}
+                        <Bar
+                          data={{
+                            // labels: sourceData.map((data) => data.label),.
+                            labels: ['Dec', 'Jan', 'Feb'],
+                            datasets: [
+                              {
+                                label: "Money In",
+                                data:[750000,850000,500000],
+                                // data: sourceData.map((data) => data.value),
+                                // backgroundColor: [
+                                //   "rgba(43, 63, 229, 0.8)",
+                                //   "rgba(250, 192, 19, 0.8)",
+                                //   "rgba(253, 135, 135, 0.8)",
+                                // ],
+                                borderRadius: 5,
+                              },
+                              {
+                                label: "Money Out",
+                                data:[920000,600000,990000],
+                                // data: sourceData.map((data) => data.value),
+                                // backgroundColor: [
+                                //   "rgba(43, 63, 229, 0.8)",
+                                //   "rgba(250, 192, 19, 0.8)",
+                                //   "rgba(253, 135, 135, 0.8)",
+                                // ],
+                                borderRadius: 5,
+                              },
+                            ],
+                          }}
+                          options={{
+                            plugins: {
+                              title: {
+                                text: "Revenue Source",
+                              },
+                            },
+                          }}
+                        />
                 </div>
 
                 <div className="dashboard-scheduled">
@@ -62,36 +107,36 @@ function Dashboard() {
                             {/* <div className="edit-icon"><Pencil size={17} /></div>
                             <div className="delete-icon"><Trash2 size={17} /></div> */}
                             <div className="top"><UserCheck /></div>
-                            <div className="mid">1,561</div>
-                            <div className="footer">Active Accounts.</div>
+                            <div className="mid"><CountUp end={1561} duration={2}/></div>
+                            <div className="footer">Active Accounts</div>
                         </div>
                         <div className="schedule-item">
                             {/* <div className="edit-icon"><Pencil size={17} /></div>
                             <div className="delete-icon"><Trash2 size={17} /></div> */}
                             <div className="top"><UserRoundCog /></div>
-                            <div className="mid">1,561</div>
-                            <div className="footer">Suspended Accountsz.</div>
+                            <div className="mid"><CountUp end={267} duration={2}/></div>
+                            <div className="footer">Suspended Accounts</div>
                         </div>
                         <div className="schedule-item">
                             {/* <div className="edit-icon"><Pencil size={17} /></div>
                             <div className="delete-icon"><Trash2 size={17} /></div> */}
                             <div className="top"><UserMinus /></div>
-                            <div className="mid">1,781</div>
-                            <div className="footer">Deactivated Accounts.</div>
+                            <div className="mid"><CountUp end={52} duration={2}/></div>
+                            <div className="footer">Deactivated Accounts</div>
                         </div>
                         <div className="schedule-item">
                             {/* <div className="edit-icon"><Pencil size={17} /></div>
                             <div className="delete-icon"><Trash2 size={17} /></div> */}
                             <div className="top"><Handshake /></div>
-                            <div className="mid">20,000</div>
-                            <div className="footer">Successful Transactions.</div>
+                            <div className="mid"><CountUp end={8721} duration={2}/></div>
+                            <div className="footer">Successful Transactions</div>
                         </div>
                         <div className="schedule-item">
                             {/* <div className="edit-icon"><Pencil size={17} /></div>
                             <div className="delete-icon"><Trash2 size={17} /></div> */}
                             <div className="top"><TimerReset /></div>
-                            <div className="mid">20,000</div>
-                            <div className="footer">Scheduled Transactions.</div>
+                            <div className="mid"><CountUp end={21} duration={2}/></div>
+                            <div className="footer">Scheduled Transactions</div>
                         </div>
                     </div>
                 </div>

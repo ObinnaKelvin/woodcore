@@ -1,6 +1,8 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Dashboard from './View/pages/dashboard/Dashboard';
 import Transactions from "./View/pages/transactions/Transactions";
+import Transfer from "./View/pages/transfer/Transfer";
+import Accounts from "./View/pages/accounts/Accounts";
 
 function App() {
   return (
@@ -9,6 +11,10 @@ function App() {
           <Route path='/' element={<Dashboard />}/>
           <Route path='/dashboard' element={<Dashboard />}/>
           <Route path='/transactions' element={<Transactions />}/>
+          <Route path='/transactions/transfer' element={<Transfer />}/>
+          <Route path='/transactions/schedule-transfer' element={<Transactions />}/>
+          <Route path='/transfer' element={<Transfer />}/>
+          <Route path='/accounts' element={<Accounts />}/>
           {/* <Route path='/about-us' element={<AboutUs />}/>
           <Route path='/blog' element={<Blog />}/>
           <Route path='/gallery' element={<Gallery />}/>
