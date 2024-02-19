@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import './transfer.scss';
 import { DesktopNavbar } from '../../components/navigation/Navbar';
-import { Handshake, Landmark, MoveDownLeft, MoveUpRight, Pencil, ReceiptText, ServerCrash, TimerReset, Trash2, UserCheck, UserMinus, UserRoundCog } from 'lucide-react';
+import { Handshake, Landmark, MoveDownLeft, MoveUpRight, Pencil, ReceiptText, Send, ServerCrash, TimerReset, Trash2, UserCheck, UserMinus, UserRoundCog } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import shot1 from '../../assets/image/headshot1.jpg'
 import shot2 from '../../assets/image/headshot2.jpg'
@@ -11,10 +11,25 @@ import shot3 from '../../assets/image/headshot3.jpg'
 const Transfer = () => {
 
     const [toWoodcore, setToWoodcore] = useState('')
+    const [searchPatient, setSearchPatient] = useState('')
+    const [showCustomer, setShowCustomer] = useState('')
+    const [showForm, setShowForm] = useState('')
+    const [amount, setAmount] = useState('')
+    const customer = JSON.parse(localStorage.getItem('customer'));
 
     const handleToWoodCore = () => {
         setToWoodcore(1)
         // localStorage.setItem('')
+    }
+
+    const handleSearch = (e) => {
+        // e.preventDefault()
+        setShowCustomer(1)
+        // localStorage.setItem('customer', JSON.stringify({
+        //     "name": "Precious Okere",
+        //     "account_no": "7011111111"
+        // }))
+        //console.log(1)
     }
     // const handleToBank = () => {
         
@@ -68,7 +83,42 @@ const Transfer = () => {
                     <div className="transfer-left-search">
                         <div className="text">Recipient Account</div>
                         <div className="search-box">
-                            <input type="text" />
+                            <input type="text" value={searchPatient} onChange={(e) => setSearchPatient(e.target.value)}/>
+                            {/* <button onChange={handleSearch}>Search</button> */}
+                            <div className='button' onClick={handleSearch}>Search</div>
+                        </div>
+                    </div>
+                }
+
+                {
+                    showCustomer === 1 &&
+
+                    <div className="transfer-left-search">
+                        <div className="tab-list-item" onClick={() => setShowForm(1)}>
+                            <div className="pic-box">
+                                <img src={shot1} alt="" />
+                            </div>
+                            <div className="details">
+                                <span>Precious Okere</span>
+                                <span>7011111111</span>
+                            </div>
+                        </div>
+                    </div>
+                }
+
+                {
+                    showForm === 1 &&
+                    <div className="transfer-left-search">
+                        <div className="customer-form">
+                            <section>
+                                <span>Amount</span>
+                                <input type="text" value={amount} onChange={(e) => setAmount(e.target.value)}/>
+                            </section>
+                            <section>
+                                <span>Remarks</span>
+                                <textarea type="text" value={amount} onChange={(e) => setAmount(e.target.value)}/>
+                            </section>
+                            <button><span>Send</span><Send /></button>
                         </div>
                     </div>
                 }

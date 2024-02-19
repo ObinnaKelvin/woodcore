@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import {LayoutDashboard, HandCoins, ArrowLeftRight, Wallet2, Users, LogOut } from 'lucide-react';
+import {LayoutDashboard, HandCoins, Wallet2, Users} from 'lucide-react';
 import './navbar.scss'
 
 
@@ -30,13 +30,12 @@ export const DesktopNavbar = () => {
                             <span>Dashboard</span>
                         </div>
                     </Link>
-                    <Link to={'/transfer'} className='link'>
+                    {/* <Link to={'/transfer'} className='link'>
                         <div className='desktopnavbar-item'>
-                            {/* <FolderSync /> */}
                             <ArrowLeftRight  size={20}/>
                             <span>Transfer</span>
                         </div>
-                    </Link>
+                    </Link> */}
                     <Link to={'/accounts'} className='link'>
                         <div className='desktopnavbar-item'>
                             <HandCoins  size={20}/>
@@ -64,6 +63,51 @@ export const DesktopNavbar = () => {
                         </div>
                     </Link> */}
                 </div>
+            </div>
+        </div>
+    )
+}
+
+export const MobileNavbar = () => {
+
+
+    return (
+        <div className="navbarmobile-container">
+            <div className="navbarmobile-wrapper">
+                <div className="step1">
+                    <Link to={'/dashboard'} className='link'>
+                        <div className='navbarmobile-item'>
+                        <LayoutDashboard  size={20}/>
+                            <span>Dashboard</span>
+                        </div>
+                    </Link>
+                    <Link to={'/accounts'} className='link'>
+                        <div className='navbarmobile-item'>
+                        <HandCoins  size={20}/>
+                            <span>Accounts</span>
+                        </div>
+                    </Link>
+                    <Link to={'/transactions'} className='link'>
+                        <div className='navbarmobile-item'>
+                            <Wallet2  size={20}/>
+                            <span>Transactions</span>
+                        </div>
+                    </Link>
+                    <Link to={'/customers'} className='link'>
+                        <div className='navbarmobile-item'>
+                            <Wallet2  size={20}/>
+                            <span>Customers</span>
+                        </div>
+                    </Link>
+                </div>
+                {/* <div className="step2">
+                    <Link to={'/patient-login'} className='link'>
+                        <div className='navbarmobile-item' onClick={handleLogout}>
+                            <LogOut size={20} />
+                            <span>Log Out</span>
+                        </div>
+                    </Link>
+                </div> */}
             </div>
         </div>
     )
