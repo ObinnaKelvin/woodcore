@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import './transfer.scss';
-import { DesktopNavbar } from '../../components/navigation/Navbar';
+import { DesktopNavbar, MobileNavbar } from '../../components/navigation/Navbar';
 import { Handshake, Landmark, MoveDownLeft, MoveUpRight, Pencil, ReceiptText, Send, ServerCrash, TimerReset, Trash2, UserCheck, UserMinus, UserRoundCog } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import shot1 from '../../assets/image/headshot1.jpg'
@@ -40,6 +40,7 @@ const Transfer = () => {
   return (
     <div className="transfer-container">
         <DesktopNavbar/>
+        <MobileNavbar />
         <div className="transfer-wrapper">
             <div className="transfer-left">
 

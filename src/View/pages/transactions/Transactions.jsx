@@ -1,6 +1,6 @@
 import React from 'react'
 import './transactions.scss';
-import { DesktopNavbar } from '../../components/navigation/Navbar';
+import { DesktopNavbar, MobileNavbar } from '../../components/navigation/Navbar';
 import { ArrowLeftRight, MoveDownLeft, MoveUpRight, Pencil, TimerReset, Trash2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Chart as ChartJS, defaults } from "chart.js/auto";
@@ -13,6 +13,7 @@ const Transactions = () => {
   return (
     <div className="transactions-container">
         <DesktopNavbar/>
+        <MobileNavbar />
 
         <div className="transactions-wrapper">
             <div className="transactions-left">

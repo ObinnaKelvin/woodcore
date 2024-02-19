@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import './accounts.scss';
-import { DesktopNavbar } from '../../components/navigation/Navbar';
+import { DesktopNavbar, MobileNavbar } from '../../components/navigation/Navbar';
 import { ArrowLeftRight, Handshake, MoveDownLeft, MoveUpRight, Pencil, TimerReset, Trash2, UserCheck, UserMinus, UserRoundCog } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import CountUp from 'react-countup';
@@ -16,6 +16,7 @@ function Accounts() {
   return (
     <div className="accounts-container">
         <DesktopNavbar/>
+        <MobileNavbar />
 
         <div className="accounts-wrapper">
             <div className="accounts-left">
