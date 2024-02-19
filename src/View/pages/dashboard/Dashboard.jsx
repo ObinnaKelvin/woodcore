@@ -1,6 +1,6 @@
 import React from 'react'
 import './dashboard.scss';
-import { DesktopNavbar } from '../../components/navigation/Navbar';
+import { DesktopNavbar, MobileNavbar } from '../../components/navigation/Navbar';
 import { Handshake, MoveDownLeft, MoveUpRight, Pencil, TimerReset, Trash2, UserCheck, UserMinus, UserRoundCog } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import CountUp from 'react-countup';
@@ -13,6 +13,7 @@ function Dashboard() {
   return (
     <div className="dashboard-container">
         <DesktopNavbar/>
+        <MobileNavbar />
 
         <div className="dashboard-wrapper">
             <div className="dashboard-left">
