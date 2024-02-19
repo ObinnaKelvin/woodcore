@@ -36,7 +36,7 @@ function Dashboard() {
                     <div className="money-move-holder">
                         <div className="money-move">
                             <div className="left">
-                                <MoveDownLeft />
+                                <MoveDownLeft size={15} />
                             </div>
                             <div className="right">
                                 <span>Money In</span>
@@ -46,7 +46,7 @@ function Dashboard() {
                         </div>
                         <div className="money-move">
                             <div className="left out">
-                                <MoveUpRight />
+                                <MoveUpRight size={15} />
                             </div>
                             <div className="right">
                                 <span>Money Out</span>
