@@ -4,11 +4,26 @@ import Transactions from "./View/pages/transactions/Transactions";
 import Transfer from "./View/pages/transfer/Transfer";
 import Accounts from "./View/pages/accounts/Accounts";
 import Customers from "./View/pages/customers/Customers";
+import {LoadingScreen} from "../src/View/components/loading/Loading";
+import { Link, useNavigate } from 'react-router-dom';
+import { useState } from "react";
 
 function App() {
+  const[isLoading, setIsLoading] = useState(true)
+  // const navigate = useNavigate()
+
   return (
     <Router>
         <Routes>
+          {/* <Route path='/' element={
+            {if (isLoading){
+              setTimeout(() => {
+                setIsLoading(false)
+                navigate("/dashboard"); //2. Then navigate to dashboard
+              }, 5000)
+            }}
+          }/> */}
+          
           <Route path='/' element={<Dashboard />}/>
           <Route path='/dashboard' element={<Dashboard />}/>
           <Route path='/transactions' element={<Transactions />}/>
@@ -17,6 +32,7 @@ function App() {
           <Route path='/transfer' element={<Transfer />}/>
           <Route path='/accounts' element={<Accounts />}/>
           <Route path='/customers' element={<Customers />}/>
+          <Route path='/welcome' element={<LoadingScreen />}/>
           {/* <Route path='/about-us' element={<AboutUs />}/>
           <Route path='/blog' element={<Blog />}/>
           <Route path='/gallery' element={<Gallery />}/>
