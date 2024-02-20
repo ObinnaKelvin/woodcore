@@ -69,6 +69,7 @@
                 .customers-holder {
                     display: flex;
                     flex-direction: row;
+                    flex-wrap: wrap;
                     gap: 30px;
                     // border: 1px solid red;
     
@@ -80,7 +81,7 @@
                        border: 1px solid #c5c5c5;
                        gap: 40px;
                        padding: 20px;
-                       width: 270px;
+                       width: 300px;
                        position: relative;
     
                        .edit-icon {
@@ -530,7 +531,8 @@
             
                         .customers-holder {
                             display: flex;
-                            flex-direction: column;
+                            flex-direction: row;
+                            flex-wrap: wrap;
                             gap: 30px;
                             border: 1px solid red;
             

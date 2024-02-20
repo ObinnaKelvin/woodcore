@@ -1,0 +1,23 @@
+export const customers = [
+    
+    {"id":1,"first_name":"Evangelia","last_name":"Sainer","email":"esainer0@statcounter.com","gender":"Female","ip_address":"170.177.86.248","account_type":"jcb","account_no":"3541378424806784","account_balance":"$312675.26"},
+    {"id":2,"first_name":"Mannie","last_name":"Kendall","email":"mkendall1@zimbio.com","gender":"Male","ip_address":"85.141.0.152","account_type":"jcb","account_no":"3543245235196937","account_balance":"$296794.92"},
+    {"id":3,"first_name":"Katrine","last_name":"Mullord","email":"kmullord2@nyu.edu","gender":"Female","ip_address":"47.84.202.85","account_type":"maestro","account_no":"6761010060821273664","account_balance":"$307819.22"},
+    {"id":4,"first_name":"Blaire","last_name":"Aizikovich","email":"baizikovich3@rakuten.co.jp","gender":"Female","ip_address":"58.221.178.10","account_type":"jcb","account_no":"3535562264747418","account_balance":"$374775.87"},
+    {"id":5,"first_name":"Inigo","last_name":"Caulwell","email":"icaulwell4@dailymail.co.uk","gender":"Male","ip_address":"179.126.103.61","account_type":"diners-club-enroute","account_no":"201510800289873","account_balance":"$374692.41"},
+    {"id":6,"first_name":"Collen","last_name":"Broadist","email":"cbroadist5@chicagotribune.com","gender":"Female","ip_address":"21.240.206.214","account_type":"jcb","account_no":"3584635510512990","account_balance":"$343449.94"},
+    {"id":7,"first_name":"Malachi","last_name":"Diment","email":"mdiment6@jugem.jp","gender":"Male","ip_address":"59.229.179.94","account_type":"jcb","account_no":"3549812921449930","account_balance":"$261293.93"},
+    {"id":8,"first_name":"Michell","last_name":"Geale","email":"mgeale7@google.com","gender":"Female","ip_address":"219.14.164.245","account_type":"diners-club-us-ca","account_no":"5507295080936845","account_balance":"$387579.48"},
+    {"id":9,"first_name":"Isa","last_name":"Dennidge","email":"idennidge8@51.la","gender":"Male","ip_address":"216.48.253.38","account_type":"jcb","account_no":"3559648622860794","account_balance":"$238745.80"},
+    {"id":10,"first_name":"Humberto","last_name":"Iannello","email":"hiannello9@google.pl","gender":"Male","ip_address":"150.19.22.253","account_type":"china-unionpay","account_no":"561000037896806836","account_balance":"$325385.93"},
+    {"id":11,"first_name":"Malena","last_name":"Jeary","email":"mjearya@phpbb.com","gender":"Female","ip_address":"94.126.59.99","account_type":"bankcard","account_no":"5602217587179277","account_balance":"$361177.50"},
+    {"id":12,"first_name":"Emlynne","last_name":"Barbera","email":"ebarberab@addtoany.com","gender":"Female","ip_address":"67.151.105.44","account_type":"jcb","account_no":"3541431917424183","account_balance":"$308145.65"},
+    {"id":13,"first_name":"Ynes","last_name":"Bleyman","email":"ybleymanc@telegraph.co.uk","gender":"Female","ip_address":"250.65.67.24","account_type":"jcb","account_no":"3551871859561756","account_balance":"$383394.51"},
+    {"id":14,"first_name":"Rayner","last_name":"Galbreth","email":"rgalbrethd@yandex.ru","gender":"Male","ip_address":"12.78.186.29","account_type":"switch","account_no":"4905453813466249","account_balance":"$212741.29"},
+    {"id":15,"first_name":"Shannan","last_name":"Bowden","email":"sbowdene@macromedia.com","gender":"Male","ip_address":"23.111.170.241","account_type":"jcb","account_no":"3576075938248432","account_balance":"$262799.80"},
+    {"id":16,"first_name":"Cory","last_name":"Ferens","email":"cferensf@nhs.uk","gender":"Male","ip_address":"198.163.21.24","account_type":"diners-club-enroute","account_no":"201646649324362","account_balance":"$271465.64"},
+    {"id":17,"first_name":"Reynold","last_name":"Ogelbe","email":"rogelbeg@histats.com","gender":"Male","ip_address":"195.75.6.161","account_type":"china-unionpay","account_no":"560221742101707829","account_balance":"$215768.85"},
+    {"id":18,"first_name":"Adelice","last_name":"Domone","email":"adomoneh@vistaprint.com","gender":"Female","ip_address":"103.198.64.197","account_type":"jcb","account_no":"3560009357131264","account_balance":"$259996.28"},
+    {"id":19,"first_name":"Yehudi","last_name":"Jouhandeau","email":"yjouhandeaui@myspace.com","gender":"Male","ip_address":"58.183.226.94","account_type":"switch","account_no":"490544784306663860","account_balance":"$324645.84"},
+    {"id":20,"first_name":"Sascha","last_name":"Castells","email":"scastellsj@wikia.com","gender":"Female","ip_address":"164.170.208.18","account_type":"mastercard","account_no":"5010123854266068","account_balance":"$351110.73"}
+]

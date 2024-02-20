@@ -6,7 +6,7 @@ import { Chart as ChartJS, defaults } from "chart.js/auto";
 import { Bar, Doughnut, Line } from "react-chartjs-2";
 import revenueData from "../../components/chart/revenueData.json";
 import userData from "../../components/chart/users.json";
-import { beneficiary } from "../../components/data/beneficiary"
+import { customers } from "../../components/data/customers"
 import './customers.scss';
 
 function Customers() {
@@ -72,7 +72,7 @@ function Customers() {
                     <div className="customers-holder">
 
                         {
-                            beneficiary.map((item, id) => {
+                            customers.map((item, id) => {
                                 return (
                                     <div className="customers-item" key={item.id}>
                                         <div className="edit-icon"><Pencil size={17} /></div>
@@ -85,7 +85,7 @@ function Customers() {
                                             </div>
 
                                         </div>
-                                        <div className={`customers-cost `}>234,000</div>
+                                        <div className={`customers-cost `}>{item.account_balance}</div>
                                     </div>
                                 )
 
