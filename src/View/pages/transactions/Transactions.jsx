@@ -8,8 +8,11 @@ import { Bar, Doughnut, Line } from "react-chartjs-2";
 import revenueData from "../../components/chart/revenueData.json";
 import sourceData from "../../components/chart/sourceData.json";
 // import TotalRevenue from '../../components/chart/Chart';
+import {transactions} from '../../components/data/transactions';
 
 const Transactions = () => {
+
+    const allCheckings = transactions.filter(item => item.account_type.includes("checking"))
   return (
     <div className="transactions-container">
         <DesktopNavbar/>
@@ -59,34 +62,6 @@ const Transactions = () => {
 
                        
                     </div>
-                    {/* <div className="transactions-left-graph">
-                        <Bar
-                          data={{
-                            labels: sourceData.map((data) => data.label),
-                            datasets: [
-                              {
-                                label: "Count",
-                                data: sourceData.map((data) => data.value),
-                                backgroundColor: [
-                                  "rgba(43, 63, 229, 0.8)",
-                                  "rgba(250, 192, 19, 0.8)",
-                                  "rgba(253, 135, 135, 0.8)",
-                                ],
-                                borderRadius: 5,
-                              },
-                            ],
-                          }}
-                          options={{
-                            plugins: {
-                              title: {
-                                text: "Revenue Source",
-                              },
-                            },
-                          }}
-                        />
-
-                       
-                    </div> */}
                     <Link to={'/transactions/transfer'} className='link'> 
                         <div className="action-card">
                             <div className="action-icon">
@@ -107,34 +82,33 @@ const Transactions = () => {
                             Scheduled Transfers
                         </div>
                     </div>
-                    {/* <div className="action-card">
-                        <div className="action-icon">
-                            <ArrowLeftRight />
-                        </div>
-                        <div className="sub-text">
-                            Transfer
-                        </div>
-                    </div> */}
-                    {/* <div className="money-move-holder">
-                        <div className="money-move">
-                            <div className="left">
-                                <MoveDownLeft />
-                            </div>
-                            <div className="right">
-                                <span>Money In</span>
-                                <span>₦ 300,000.00</span>
-                            </div>
-                        </div>
-                        <div className="money-move">
-                            <div className="left out">
-                                <MoveUpRight />
-                            </div>
-                            <div className="right">
-                                <span>Money Out</span>
-                                <span>₦ 850,000.00</span>
-                            </div>
-                        </div>
-                    </div> */}
+                </div>
+
+                <div className="accounts-transaction-activity">
+                    <div className="header-text">
+                        <h3>Transaction History</h3>
+                        <input type='text' placeholder='Search amount, payee...' role='search-input'/>
+                        {/* <Link className='link' to={'/transactions'}><span>See more</span></Link> */}
+                    </div>
+
+                    <div className="transaction-holder">
+                        {
+                            allCheckings.map((item, id) => {
+                                return (
+                                    <div className="transaction-item" key={item.id}>
+                                        <div className={`transaction-icon ${item.move === "in" ? "in" : "out"}`}><ArrowLeftRight /></div>
+                                        <div className="transaction-details">
+                                            <div className="main-text">{item.first_name} {item.last_name}</div>
+                                            <div className="sub-text">{item.encoded_date}</div>
+                                        </div>
+                                        <div className={`transaction-cost ${item.move === "in" ? "in" : "out"}`}>{item.amount}</div>
+                                    </div>
+                                )
+
+                            })
+                        }
+                        
+                    </div>
                 </div>
 
 
@@ -147,28 +121,28 @@ const Transactions = () => {
                         <div className="schedule-item">
                             <div className="edit-icon"><Pencil size={17} /></div>
                             <div className="delete-icon"><Trash2 size={17} /></div>
-                            <div className="top">100001</div>
+                            <div className="top">100112121</div>
                             <div className="mid">Noah Darvich</div>
                             <div className="footer">18th Feb, 2024</div>
                         </div>
                         <div className="schedule-item">
                             <div className="edit-icon"><Pencil size={17} /></div>
                             <div className="delete-icon"><Trash2 size={17} /></div>
-                            <div className="top">100002</div>
+                            <div className="top">10456872</div>
                             <div className="mid">Simon Akpan</div>
                             <div className="footer">18th Feb, 2024</div>
                         </div>
                         <div className="schedule-item">
                             <div className="edit-icon"><Pencil size={17} /></div>
                             <div className="delete-icon"><Trash2 size={17} /></div>
-                            <div className="top">100003</div>
+                            <div className="top">10998342</div>
                             <div className="mid">Sodiq Bello</div>
                             <div className="footer">18th Feb, 2024</div>
                         </div>
                         <div className="schedule-item">
                             <div className="edit-icon"><Pencil size={17} /></div>
                             <div className="delete-icon"><Trash2 size={17} /></div>
-                            <div className="top">100004</div>
+                            <div className="top">10448975</div>
                             <div className="mid">Sodiq Bello</div>
                             <div className="footer">18th Feb, 2024</div>
                         </div>
