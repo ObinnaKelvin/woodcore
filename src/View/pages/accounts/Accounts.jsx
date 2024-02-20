@@ -28,7 +28,7 @@ function Accounts() {
 
                 <div className="accounts-left-stats">
                     <div className={`balance-card ${isBalanceSelected === 1 && "active"}`} onClick={() => setIsBalanceSelected(1)}>
-                        <div className="sub-text">
+                        <div data-testid='balance-card' className="sub-text">
                             Checking Balance
                         </div>
                         <div className="main-text">
@@ -45,7 +45,7 @@ function Accounts() {
                             <CountUp end={2401682.00} duration={2}/>
                         </div>
                     </div>
-                    <div className={`balance-card ${isBalanceSelected === 3 && "active"}`} onClick={() => setIsBalanceSelected(3)}>
+                    <div role='balance-card' className={`balance-card ${isBalanceSelected === 3 && "active"}`} onClick={() => setIsBalanceSelected(3)}>
                         <div className="sub-text">
                             Credit Card Balance
                         </div>
@@ -91,9 +91,9 @@ function Accounts() {
     
                         <div className="transaction-holder">
                             {
-                                allCheckings.map(item => {
+                                allCheckings.map((item, id) => {
                                     return (
-                                        <div className="transaction-item">
+                                        <div className="transaction-item" key={item.id}>
                                             <div className={`transaction-icon ${item.move === "in" ? "in" : "out"}`}><ArrowLeftRight /></div>
                                             <div className="transaction-details">
                                                 <div className="main-text">{item.first_name} {item.last_name}</div>
