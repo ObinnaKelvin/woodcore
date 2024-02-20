@@ -33,13 +33,13 @@ const Transactions = () => {
                                 labels: revenueData.map((data) => data.label),
                                 datasets: [
                                 {
-                                    label: "Revenue",
+                                    label: "Money In",
                                     data: revenueData.map((data) => data.revenue),
                                     backgroundColor: "#064FF0",
                                     borderColor: "#064FF0",
                                 },
                                 {
-                                    label: "Cost",
+                                    label: "Money Out",
                                     data: revenueData.map((data) => data.cost),
                                     backgroundColor: "#FF3030",
                                     borderColor: "#FF3030",

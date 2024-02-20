@@ -3,6 +3,7 @@ import Dashboard from './View/pages/dashboard/Dashboard';
 import Transactions from "./View/pages/transactions/Transactions";
 import Transfer from "./View/pages/transfer/Transfer";
 import Accounts from "./View/pages/accounts/Accounts";
+import Customers from "./View/pages/customers/Customers";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path='/transactions/schedule-transfer' element={<Transactions />}/>
           <Route path='/transfer' element={<Transfer />}/>
           <Route path='/accounts' element={<Accounts />}/>
+          <Route path='/customers' element={<Customers />}/>
           {/* <Route path='/about-us' element={<AboutUs />}/>
           <Route path='/blog' element={<Blog />}/>
           <Route path='/gallery' element={<Gallery />}/>
