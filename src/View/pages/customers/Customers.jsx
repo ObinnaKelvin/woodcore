@@ -95,43 +95,6 @@ function Customers() {
                     </div>
                 </div>
 
-{/* 
-                <div className="customers-scheduled">
-                    <div className="header-text">
-                        Scheduled customers
-                    </div>
-
-                    <div className="scheduled-holder">
-                        <div className="schedule-item">
-                            <div className="edit-icon"><Pencil size={17} /></div>
-                            <div className="delete-icon"><Trash2 size={17} /></div>
-                            <div className="top">100112121</div>
-                            <div className="mid">Noah Darvich</div>
-                            <div className="footer">18th Feb, 2024</div>
-                        </div>
-                        <div className="schedule-item">
-                            <div className="edit-icon"><Pencil size={17} /></div>
-                            <div className="delete-icon"><Trash2 size={17} /></div>
-                            <div className="top">10456872</div>
-                            <div className="mid">Simon Akpan</div>
-                            <div className="footer">18th Feb, 2024</div>
-                        </div>
-                        <div className="schedule-item">
-                            <div className="edit-icon"><Pencil size={17} /></div>
-                            <div className="delete-icon"><Trash2 size={17} /></div>
-                            <div className="top">10998342</div>
-                            <div className="mid">Sodiq Bello</div>
-                            <div className="footer">18th Feb, 2024</div>
-                        </div>
-                        <div className="schedule-item">
-                            <div className="edit-icon"><Pencil size={17} /></div>
-                            <div className="delete-icon"><Trash2 size={17} /></div>
-                            <div className="top">10448975</div>
-                            <div className="mid">Sodiq Bello</div>
-                            <div className="footer">18th Feb, 2024</div>
-                        </div>
-                    </div>
-                </div> */}
 
             </div>
             {/* <div className="customers-right">
